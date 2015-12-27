@@ -7,4 +7,9 @@
   <p class="body">
     <%= @post.body %>
   </p>
+  <p>
+      <button class="button"><%= link_to "Edit", edit_post_path(@post) %></button>
+      <button class="button"><%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: 'Are you sure?' }%></button>
+      <button class="button"><%= link_to "Cancel", root_path %></button>
+   </p>
 </div>
